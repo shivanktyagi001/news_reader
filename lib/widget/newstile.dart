@@ -13,7 +13,6 @@ class ArticleTile extends StatefulWidget {
 
 class _ArticleTileState extends State<ArticleTile> {
   bool _isPressed = false;
-
   @override
   Widget build(BuildContext context) {
     final article = widget.article;
@@ -53,7 +52,6 @@ class _ArticleTileState extends State<ArticleTile> {
               borderRadius: BorderRadius.circular(20),
               child: Stack(
                 children: [
-                  // 🌄 Smooth image loading
                   AnimatedSwitcher(
                     duration: const Duration(milliseconds: 400),
                     child: article.image != null && article.image!.isNotEmpty
@@ -87,7 +85,7 @@ class _ArticleTileState extends State<ArticleTile> {
                     ),
                   ),
 
-                  // 🌌 Dynamic overlay gradient
+
                   AnimatedContainer(
                     duration: const Duration(milliseconds: 400),
                     height: 220,
@@ -108,7 +106,7 @@ class _ArticleTileState extends State<ArticleTile> {
                     ),
                   ),
 
-                  // 📰 Title text
+
                   Positioned(
                     bottom: 0,
                     left: 0,
